@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConectionManager {
-    private static final String STR_CONECTION = "jdbc:sqlserver://DOCENTEPLANTA4:1433;" +
+    private static final String STR_CONECTION = "jdbc:sqlserver://GERBERGOMEZ:1433;" +
             "encrypt=true;" +
             "database=SecurityDB2025;" +
             "trustServerCertificate=true;" +
