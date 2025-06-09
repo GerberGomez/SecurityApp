@@ -11,10 +11,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ConectionManagerTest {
 
-    ConectionManager conectionManager;
+    ConnectionManager conectionManager;
     @BeforeEach
     void setUp() throws SQLException {
-        conectionManager = ConectionManager.getInstance();
+        conectionManager = ConnectionManager.getInstance();
     }
 
     @AfterEach

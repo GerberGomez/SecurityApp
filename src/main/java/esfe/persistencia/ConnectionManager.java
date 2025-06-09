@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class ConectionManager {
+public class ConnectionManager {
     private static final String STR_CONECTION = "jdbc:sqlserver://GERBERGOMEZ:1433;" +
             "encrypt=true;" +
             "database=SecurityDB2025;" +
@@ -14,9 +14,9 @@ public class ConectionManager {
 
     private Connection connection;
 
-    private static ConectionManager instance;
+    private static ConnectionManager instance;
 
-    private ConectionManager(){
+    private ConnectionManager(){
         this.connection = null;
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
@@ -48,9 +48,9 @@ public class ConectionManager {
         }
     }
 
-    public static synchronized ConectionManager getInstance(){
+    public static synchronized ConnectionManager getInstance(){
         if(instance == null){
-            instance = new ConectionManager();
+            instance = new ConnectionManager();
         }
         return instance;
     }
